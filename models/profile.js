@@ -2,23 +2,11 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const profileSchema = new Schema({
-  name: String,
-  avatar: String,
-  email: String,
-  phoneNumber: number,
-  resumeUrl: String,
-  education: [eduSchema],
-  application: [appSchema],
-}, {
-  timestamps: true
-})
-
 const eduSchema = new Schema({
-  name: {type: String, required: true},
+  name: { type: String, required: true },
   degree: {
     type: String,
-    enum: ['G', 'PG', 'PG-13', 'R']
+    enum: ['BSc', 'BEng', 'LLB', 'BSW', 'BBA']
   },
   state: String,
   country: String,
@@ -28,13 +16,13 @@ const eduSchema = new Schema({
     default: function() {
       return new Date().getFullYear()
     }
-  },
+  }
 })
 
 const appSchema = new Schema({
-  companyName: {type: String, required: true},
-  prosition: String,
-  jobtype: {
+  companyName: { type: String, required: true },
+  position: String,
+  jobType: {
     type: String,
     enum: ['part time', 'full time', 'temporary', 'contract']
   },
@@ -48,7 +36,22 @@ const appSchema = new Schema({
     type: String,
     enum: ['weekend only', 'weekdays only']
   },
-  availaibility
+  availability: {
+    type: Number,
+    enum: ['Immediately', '2 weeks', '1 Month']
+  }
+})
+
+const profileSchema = new Schema({
+  name: String,
+  avatar: String,
+  email: String,
+  phoneNumber: Number,
+  resumeUrl: String,
+  education: [eduSchema],
+  application: [appSchema]
+}, {
+  timestamps: true
 })
 
 const Profile = mongoose.model('Profile', profileSchema)
