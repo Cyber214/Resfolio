@@ -26,7 +26,7 @@ const profileSchema = new Schema({
   email: String,
   phoneNumber: Number,
   resumeUrl: String,
-  education: [eduSchema],
+  educations: [eduSchema],
   resumeUrl: String,
 }, {
   timestamps: true

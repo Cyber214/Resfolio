@@ -13,6 +13,9 @@ router.get('/new', isLoggedIn, profilesCtrl.new)
 // POST localhost:3000/profiles
 router.post('/', isLoggedIn, profilesCtrl.create)
 
+// GET localhost:3000/profiles
+router.post('/educations', profilesCtrl.addEdu)
+
 export {
   router
 }
