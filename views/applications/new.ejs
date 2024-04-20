@@ -1,6 +1,54 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1>Test</h1>
+<main>
+  <h1>New Application</h1>
+
+  <form action="/applications" method="POST">
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company" required>
+    <br><br>
+    <label for="availability">Availability:</label>
+    <select id="availability" name="availability" required>
+      <option value="immediately">Immediately</option>
+      <option value="2 weeks">2 weeks</option>
+      <option value="1 month">1 month</option>
+    </select>
+    <br><br>
+    <label for="position">Position:</label>
+    <input type="text" id="position" name="position">
+    <br><br>
+    <label for="type">Type:</label>
+    <select id="type" name="type">
+      <option value="part time">Part Time</option>
+      <option value="full time">Full Time</option>
+      <option value="temporary">Temporary</option>
+      <option value="contract">Contract</option>
+    </select>
+    <br><br>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location">
+    <br><br>
+    <label for="mileRange">Mile Range:</label>
+    <select id="mileRange" name="mileRange">
+      <option value="0">0 miles</option>
+      <option value="5">5 miles</option>
+      <option value="10">10 miles</option>
+      <option value="15">15 miles</option>
+      <option value="20">20 miles</option>
+    </select>
+    <br><br>
+    <label for="workDays">Work Days:</label>
+    <select id="workDays" name="workDays">
+      <option value="weekends only">Weekends Only</option>
+      <option value="weekdays only">Weekdays Only</option>
+    </select>
+    <br><br>
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills" name="skills" placeholder="Separate skills with commas">
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+</main>
 
 <%- include('../partials/footer') %>

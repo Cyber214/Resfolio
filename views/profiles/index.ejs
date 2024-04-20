@@ -4,11 +4,11 @@
 <main>
 
   <h1><%= title %></h1>
-  <p>Name: <%= profile.name %></p>
-  <p>Avatar URL: <%= profile.avatar %></p>
-  <p>Address: <%= profile.address %></p>
-  <p>Email: <%= profile.email %></p>
-  <p>Phone: <%= profile.phone %></p>
+  <p>Name: <%= user.profile.name %></p>
+  <p>Avatar URL: <%= user.profile.avatar %></p>
+  <p>Address: <%= user.profile.address %></p>
+  <p>Email: <%= user.profile.email %></p>
+  <p>Phone: <%= user.profile.phone %></p>
 
   <form action="/profiles" method="POST">
     <label for="name">Name of Institution:</label>
@@ -42,14 +42,6 @@
     <br>
     <button type="submit">Submit</button>
   </form> 
-  
-  
-  <h2>Education List!</h2>
-  <ul>
-    <% profile.educations.forEach(education => { %>
-      <li><%= education.name %> - <%= education.degree %> - <%= education.state %> - <%= education.country %></li>
-    <% }) %>
-  </ul>
 
 </main>
 

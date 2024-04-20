@@ -1,11 +1,11 @@
-import { Application } from "../models/application.js"
+import { Application } from '../models/application.js'
 
-function newApp(req, res) {
-  res.render('profiles/new', {
-    title: 'My Profile',
+function newApplication(req, res) {
+  res.render('applications/new', {
+    title: 'Applications',
   })
 }
 
 export {
-  newApp as new,
+  newApplication as new,
 }

@@ -19,9 +19,9 @@ function create(req, res) {
 
 function index(req, res) {
   Profile.find({})
-  .then(profile => {
+  .then(profiles => {
     res.render('profiles/index', {
-      profile: profile,
+      profiles: profiles,
       title: 'Profile Page'
     })
   })
@@ -45,29 +45,8 @@ function addEdu(req, res) {
   })
 }
 
-function addEducation(req, res) {
-  Profile.find({})
-  .then(education => {
-    req.body = req.user
-    profile.educations.push(req.body)
-    profile.save()
-    .then(()=> {
-      res.redirect('/profiles')
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/profiless')
-    })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/profiles')
-  })
-}
-
 export {
   newProfile as new,
   create,
   index,
-  addEdu,
 }

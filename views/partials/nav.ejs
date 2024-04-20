@@ -5,13 +5,15 @@
 <body>
   <nav>
     <% if (user) { %>
-      <a href="/profiles/new">New Profiles</a>
-      <a href="/profiles">Profiles</a>
+      <img id="avatar" src="<%= user.profile.avatar %>"/>
+      <p>Logged in as <%= user.profile.name %>.</p>
       <a href="/applications">Applications</a>
+      <a href="/profiles/index">Profiles</a>
+      <a href="/applications/new">New Application</a>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>
-    <% } else { %>
+      <% } else { %>
       <div 
         id="g_id_onload"
         data-client_id="<%= googleClientID %>"
