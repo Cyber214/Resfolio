@@ -3,7 +3,6 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const eduSchema = new Schema({
-  author: {type: Schema.Types.ObjectId, ref: 'Profile'},
   name: { type: String, required: true },
   degree: {
     type: String,
@@ -20,29 +19,6 @@ const eduSchema = new Schema({
   }
 })
 
-const appSchema = new Schema({
-  companyName: { type: String, required: true },
-  position: String,
-  jobType: {
-    type: String,
-    enum: ['part time', 'full time', 'temporary', 'contract']
-  },
-  state: String,
-  country: String,
-  mileRange: {
-    type: Number,
-    enum: ['0', '5', '10', '15', '20']
-  },
-  workDays: {
-    type: String,
-    enum: ['weekend only', 'weekdays only']
-  },
-  availability: {
-    type: Number,
-    enum: ['Immediately', '2 weeks', '1 Month']
-  }
-})
-
 const profileSchema = new Schema({
   name: String,
   avatar: String,
@@ -50,7 +26,7 @@ const profileSchema = new Schema({
   phoneNumber: Number,
   resumeUrl: String,
   education: [eduSchema],
-  application: [appSchema]
+  resumeUrl: String,
 }, {
   timestamps: true
 })
