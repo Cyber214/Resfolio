@@ -4,8 +4,14 @@ import * as profilesCtrl from "../controllers/profiles.js"
 
 const router = Router()
 
+// GET localhost:3000/profiles
+router.get('/', isLoggedIn, profilesCtrl.index)
+
 // GET localhost:3000/profiles/new
 router.get('/new', isLoggedIn, profilesCtrl.new)
+
+// POST localhost:3000/profiles
+router.post('/', isLoggedIn, profilesCtrl.create)
 
 export {
   router

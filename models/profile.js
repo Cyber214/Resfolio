@@ -22,6 +22,7 @@ const eduSchema = new Schema({
 const profileSchema = new Schema({
   name: String,
   avatar: String,
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
   email: String,
   phoneNumber: Number,
   resumeUrl: String,
