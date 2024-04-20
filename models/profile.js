@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const eduSchema = new Schema({
+  author: {type: Schema.Types.ObjectId, ref: 'Profile'},
   name: { type: String, required: true },
   degree: {
     type: String,
