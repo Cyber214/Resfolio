@@ -2,11 +2,8 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const applicationSchema = new Schema({
-	ownerId: {
-		type: Schema.Types.ObjectId,
-		ref: 'Profile',
-	},
+const appSchema = new Schema({
+	author: { type: Schema.Types.ObjectId, ref: 'Profile' },
 	availability: {
 		type: String,
 		enum: ['immediately', '2 weeks', '1 month']
@@ -34,10 +31,22 @@ const applicationSchema = new Schema({
 	timestamps: true
 })
 
+const accountSchema = new Schema({
+	author: { type: Schema.Types.ObjectId, ref: 'Profile' },
+	address: String,
+	email: {
+		type: email
+	},
+	phoneNo: {
+    type: Number,
+    min: 10,
+    max: 10,
+  },
+	application: [appSchema]
+})
 
-const Application = mongoose.model('Application', applicationSchema)
+const Account = mongoose.model('Account', accountSchema)
 
 export {
-  Application
+  Account
 }
-
