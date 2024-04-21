@@ -4,10 +4,6 @@ const Schema = mongoose.Schema
 
 const appSchema = new Schema({
 	author: { type: Schema.Types.ObjectId, ref: 'Profile' },
-	availability: {
-		type: String,
-		enum: ['immediately', '2 weeks', '1 month']
-	},
 	company: {
 		type: String,
 		required: true
@@ -16,6 +12,10 @@ const appSchema = new Schema({
 	type: {
 		type: String,
 		enum: ['part time', 'full time', 'temporary', 'contract']
+	},
+	availability: {
+		type: String,
+		enum: ['immediately', '2 weeks', '1 month']
 	},
 	location: String,
 	mileRange: {
@@ -43,6 +43,8 @@ const accountSchema = new Schema({
     max: 10,
   },
 	application: [appSchema]
+}, {
+	timestamps: true
 })
 
 const Account = mongoose.model('Account', accountSchema)

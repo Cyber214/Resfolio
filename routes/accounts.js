@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { isLoggedIn } from '../middleware/middleware.js'
-import * as accountsCtrl from "../controllers/accountss.js"
+import * as accountsCtrl from ""
 
 const router = Router()
 
