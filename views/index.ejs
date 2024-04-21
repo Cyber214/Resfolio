@@ -2,40 +2,20 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h2>hello <%= user ? user.profile.name : "friends" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
+        id="avatar"
         src="<%= user.profile.avatar %>"
         alt="<%= user.profile.name %> avatar"
       />
     </div>
   <% } %>
   <% if (!user) { %>
-    <h2>Please log in with google button in the nav!</h2>
+    <h4> Please log in using the Google button in the nav to check if your meal is vegan and/or share some of your tasty vegan snacks and meals.</h2>
+    <h1>VeganRify🥑</h1>
   <% } %>
 </main>
-<div>
-
-  <h2>HEY!!!</h2>
-  <p>Don't search for jobs!!</p>
-  <p>Have employers search for you 🫵</p>
-
-  <h1>Discover, Connect, Thrive</h1>
-  <h2>Your APPLICATION for growth.</h2>
-
-  <p>Empowering connections, Enriching lives,</p>
-  <p>One profile at a time.</p>
-
-  <p>Unlock potential with Resfolio,</p>
-  <p>Where possibilities meet reality.</p>
-
-  <p>Your gateway to success,</p>
-  <p>It's in your fingertips.</p>
-
-  <p>Obstacles once towering,</p>
-  <p>Broken down by determination.</p>
-  
-</div>
 
 <%- include('./partials/footer') %>

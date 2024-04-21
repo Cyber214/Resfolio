@@ -34,14 +34,15 @@ const appSchema = new Schema({
 const accountSchema = new Schema({
 	author: { type: Schema.Types.ObjectId, ref: 'Profile' },
 	address: String,
-	email: {
-		type: email
-	},
+	email: String,
 	phoneNo: {
     type: Number,
     min: 10,
     max: 10,
   },
+	dateOfBirth: Date,
+  languages: [String],
+  accountPhoto: String,
 	application: [appSchema]
 }, {
 	timestamps: true
