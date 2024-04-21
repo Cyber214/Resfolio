@@ -34,7 +34,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-right: 70px;
+  margin-right: 50vh;
 }
 
 .right {

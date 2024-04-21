@@ -6,7 +6,6 @@ const applicationSchema = new Schema({
 	ownerId: {
 		type: Schema.Types.ObjectId,
 		ref: 'Profile',
-		required: true
 	},
 	availability: {
 		type: String,

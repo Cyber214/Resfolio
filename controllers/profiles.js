@@ -18,30 +18,16 @@ function create(req, res) {
 }
 
 function index(req, res) {
-  Profile.find({})
-  .then(profiles => {
-    res.render('profiles/index', {
-      profiles: profiles,
-      title: 'Profile Page'
+  Profile.findById(req.user.profile._id)
+  .then(profileData => {
+    res.render('profiles/index', { 
+      profile: profileData,
+      title: 'Add Performer'
     })
   })
   .catch(err => {
     console.log(err)
     res.redirect('/')
-  })
-}
-
-function addEdu(req, res) {
-  Profile.find(req.body)
-  .then(profile => {
-    profile.save()
-    .then(() => {
-      res.redirect('/profiles')
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/profiles')
-    })
   })
 }
 

@@ -1,0 +1,27 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Applications</h1>
+  <ul>
+    <% applications.forEach(application => { %>
+      <li>
+        <h2><%= application.position %></h2>
+        <p><strong>Company:</strong> <%= application.company %></p>
+        <p><strong>Type:</strong> <%= application.type %></p>
+        <p><strong>Location:</strong> <%= application.location %></p>
+        <p><strong>Availability:</strong> <%= application.availability %></p>
+        <p><strong>Mile Range:</strong> <%= application.mileRange %> miles</p>
+        <p><strong>Work Days:</strong> <%= application.workDays %></p>
+        <p><strong>Skills:</strong></p>
+        <ul>
+          <% application.skills.forEach(skill => { %>
+              <li><%= skill %></li>
+          <% }) %>
+        </ul>
+      </li>
+    <% }) %>
+  </ul>
+</main>
+
+<%- include('../partials/footer') %>
