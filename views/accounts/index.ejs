@@ -1,0 +1,25 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/accounts/index.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Account List</h1>
+  <% accounts.forEach(account => { %>
+    <div class="account-container">
+      <div class="account-info">Email: <%= account.email %></div>
+      <div class="account-info">Phone Number: <%= account.phoneNo %></div>
+      <div class="account-info">Date of Birth: <%= account.dateOfBirth %></div>
+      <div class="account-info">Languages: <%= account.languages.join(', ') %></div>
+      <div class="account-actions">
+        <a href="/accounts/<%= account._id %>">View</a>
+        <a href="/accounts/<%= account._id %>/edit">Edit</a>
+        <form action="/accounts/<%= account._id %>/delete" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+</main>
+
+
+<%- include('../partials/footer') %>
