@@ -37,8 +37,6 @@ const accountSchema = new Schema({
 	email: String,
 	phoneNo: {
     type: Number,
-    min: 10,
-    max: 10,
   },
 	dateOfBirth: Date,
   languages: [String],
