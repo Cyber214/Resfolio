@@ -41,7 +41,7 @@ const accountSchema = new Schema({
 	dateOfBirth: Date,
   languages: [String],
   accountPhoto: String,
-	application: [appSchema]
+	applications: [appSchema]
 }, {
 	timestamps: true
 })

@@ -21,7 +21,6 @@ function create(req, res) {
 function show(req, res) {
   Account.findById(req.params.accountId)
   .populate('author')
-  .populate('applications.author')
   .then(account => {
     res.render('accounts/show' ,{
       title: 'Account Details',
@@ -56,9 +55,31 @@ function deleteAccount(req, res) {
   })
 }
 
+function createApp(req, res) {
+  Account.findById(req.params.accountId)
+  .then(account => {
+    req.body.author = req.user.profile._id
+    account.applications.push(req.body)
+    account.save()
+    .then(()=> {
+      res.redirect(`/accounts/${account._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newAccount as new,
   create,
   index,
   deleteAccount as delete,
+  show,
+  createApp,
 }

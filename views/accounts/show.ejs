@@ -1,0 +1,94 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/accounts/index.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Account List</h1>
+  <div class="accounts-container">
+    <div><img id="avatar" src="<%= account.avatar %>" alt=""></div>
+    <div class="account-info">Name: <%= account.author.name %></div>
+    <div class="account-info">Email: <%= user.email %></div>
+    <div class="account-info">Phone Number: <%= account.phoneNo %></div>
+    <div class="account-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
+    <div class="account-actions">
+      <% if (account.author._id.equals(user.profile._id)) { %>
+      <a href="/accounts/<%= account._id %>/edit"><button>Edit</button></a>
+      <form action="/accounts/<%= account._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+      <% } %>
+    </div>
+    <form method="POST" action="/accounts/<%= account._id %>/applications">
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="position">Position:</label>
+      <input type="text" id="position" name="position">
+
+      <label for="type">Type:</label>
+      <select id="type" name="type" required>
+        <option value="part time">Part Time</option>
+        <option value="full time">Full Time</option>
+        <option value="temporary">Temporary</option>
+        <option value="contract">Contract</option>
+      </select>
+
+      <label for="availability">Availability:</label>
+      <select id="availability" name="availability" required>
+        <option value="immediately">Immediately</option>
+        <option value="2 weeks">2 Weeks</option>
+        <option value="1 month">1 Month</option>
+      </select>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location">
+
+      <label for="mileRange">Mile Range:</label>
+      <select id="mileRange" name="mileRange">
+        <option value="0">0 miles</option>
+        <option value="5">5 miles</option>
+        <option value="10">10 miles</option>
+        <option value="15">15 miles</option>
+        <option value="20">20 miles</option>
+      </select>
+
+      <label for="workDays">Work Days:</label>
+      <select id="workDays" name="workDays">
+        <option value="weekends only">Weekends Only</option>
+        <option value="weekdays only">Weekdays Only</option>
+      </select>
+
+      <label for="skills">Skills:</label>
+      <input type="text" id="skills" name="skills">
+
+      <button type="submit" class="app-button">Add Application</button>
+    </form>
+    <% if (account.applications) { %>
+      <h3>Applications</h3>
+      <div>
+        <% account.applications.forEach(application => { %>
+          <div>
+            <%= application.company %>
+            <%= application.position %>
+            <%= application.type %>
+            <%= application.availability %>
+            <%= application.location %>
+            <%= application.mileRange %>
+            <%= application.workDays %>
+            <%= application.skills %>
+            <%= application.author.name %> 
+            <% if (account.author._id.equals(user.profile._id)) { %>
+              <form action="/accounts/<%= account._id %>/applications/<%= application._id %>?_method=DELETE" method="POST">
+                <button type="submit">🗑️</button>
+              </form> 
+            <% } %>
+            </div>
+        <% }) %>
+        </div>
+    <% } else { %>
+      <h3>This person has no applications yet</h3>
+    <% } %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>
