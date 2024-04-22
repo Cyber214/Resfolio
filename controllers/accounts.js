@@ -75,6 +75,25 @@ function createApp(req, res) {
   })
 }
 
+function deleteApp(req, res) {
+  Account.findById(req.params.accountId)
+  .then(account => {
+    account.applications.remove({_id: req.params.applicationId})
+    account.save()
+    .then(() => {
+      res.redirect(`/accounts/${account._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newAccount as new,
   create,
@@ -82,4 +101,5 @@ export {
   deleteAccount as delete,
   show,
   createApp,
+  deleteApp
 }

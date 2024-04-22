@@ -19,12 +19,8 @@ input, textarea {
   border-radius: 5px;
 }
 
-.account-form div {
-  margin-bottom: 15px;
-}
-
 .account-actions {
-  background: #2F3D59; /* Updated background color */
+  background: #2F3D59;
   display: flex;
   max-width: 400px;
   margin: 0 auto;

@@ -16,6 +16,8 @@ router.delete('/:accountId', isLoggedIn, accountsCtrl.delete)
 
 router.post('/:accountId/applications', isLoggedIn, accountsCtrl.createApp)
 
+router.delete('/:accountId/applications/:applicationId', isLoggedIn, accountsCtrl.deleteApp)
+
 export {
   router
 }

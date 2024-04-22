@@ -1,19 +1,19 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/accounts/index.css">
+<link rel="stylesheet" href="/stylesheets/accounts/show.css">
 <%- include('../partials/nav') %>
 
-<main>
+<h1>Account List</h1>
 
-  <h1>Account List</h1>
+<div id="body">
 
-  <div class="accounts-container">
+  <div class="acc-container">
 
     <div><img id="avatar" src="<%= account.avatar %>" alt=""></div>
-    <div class="account-info">Name: <%= account.author.name %></div>
-    <div class="account-info">Email: <%= user.email %></div>
-    <div class="account-info">Phone Number: <%= account.phoneNo %></div>
-    <div class="account-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
-    <div class="account-actions">
+    <div class="acc-info">Name: <%= account.author.name %></div>
+    <div class="acc-info">Email: <%= user.email %></div>
+    <div class="acc-info">Phone Number: <%= account.phoneNo %></div>
+    <div class="acc-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
+    <div class="acc-actions">
       <% if (account.author._id.equals(user.profile._id)) { %>
       <a href="/accounts/<%= account._id %>/edit"><button>Edit</button></a>
       <form action="/accounts/<%= account._id %>?_method=DELETE" method="POST">
@@ -23,7 +23,7 @@
     </div>
 
     <% if (account.applications) { %>
-      <h3>Applications</h3>
+      <h3>Applications List</h3>
       <div>
         <% account.applications.forEach(application => { %>
           <div>
@@ -38,7 +38,7 @@
             <%= application.author.name %> 
             <% if (account.author._id.equals(user.profile._id)) { %>
               <form action="/accounts/<%= account._id %>/applications/<%= application._id %>?_method=DELETE" method="POST">
-                <button type="submit">🗑️</button>
+                <button type="submit">❌</button>
               </form> 
             <% } %>
             </div>
@@ -50,7 +50,7 @@
 
   </div>
 
-  <div class="form-container">
+  <div class="add-container">
 
     <form method="POST" action="/accounts/<%= account._id %>/applications">
       <label for="company">Company:</label>
@@ -94,13 +94,13 @@
 
       <label for="skills">Skills:</label>
       <input type="text" id="skills" name="skills">
-
+      <br><br>
       <button type="submit" class="app-button">Add Application</button>
       
     </form>
 
   </div>
 
-</main>
+</div>
 
 <%- include('../partials/footer') %>
