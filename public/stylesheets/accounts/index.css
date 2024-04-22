@@ -1,3 +1,7 @@
+body {
+  color: #2F3D59;
+}
+
 .account-container {
   display: flex;
   flex-direction: column;
@@ -5,8 +9,11 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 3px solid #2F3D59; /* Updated border color */
   border-radius: 10px;
+  background: #336699; /* Updated background color */
+  color: white;
+  margin-top: 30px;
 }
 
 .account-info {
@@ -24,11 +31,12 @@
 }
 
 .account-actions {
+  background: #2F3D59; /* Updated background color */
   display: flex;
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  border: 1px solid #7CDE95;
   border-radius: 10px;
 }
 

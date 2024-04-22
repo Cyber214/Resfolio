@@ -1,0 +1,1 @@
+<div class="account-info">Languages: <%= account.languages.join(', ') %></div>

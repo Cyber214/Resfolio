@@ -9,6 +9,7 @@ router.get('/', isLoggedIn, accountsCtrl.index)
 router.get('/new', isLoggedIn, accountsCtrl.new)
 
 router.post('/', isLoggedIn, accountsCtrl.create)
+router.delete('/:accountId', isLoggedIn, accountsCtrl.delete)
 
 export {
   router

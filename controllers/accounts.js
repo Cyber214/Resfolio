@@ -18,6 +18,18 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Account.findById(req.params.accountId)
+  .populate('author')
+  .populate('applications.author')
+  .then(account => {
+    res.render('accounts/show' ,{
+      title: 'Account Details',
+      account: account
+    })
+  })
+}
+
 function index(req, res) {
   Account.find({})
   .populate('author')
@@ -33,8 +45,20 @@ function index(req, res) {
   })
 }
 
+function deleteAccount(req, res) {
+  Account.findByIdAndDelete(req.params.accountId)
+  .then(account => {
+    res.redirect('/accounts')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newAccount as new,
   create,
   index,
+  deleteAccount as delete,
 }

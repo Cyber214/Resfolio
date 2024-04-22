@@ -6,17 +6,19 @@
   <h1>Account List</h1>
   <% accounts.forEach(account => { %>
     <div class="account-container">
-      <div><img id="avatar" src="<%= account.author.avatar %>" alt=""></div>
+      <div><img id="avatar" src="<%= account.avatar %>" alt=""></div>
+      <div class="account-info">Name: <%= account.author.name %></div>
       <div class="account-info">Email: <%= user.email %></div>
       <div class="account-info">Phone Number: <%= account.phoneNo %></div>
       <div class="account-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
-      <div class="account-info">Languages: <%= account.languages.join(', ') %></div>
       <div class="account-actions">
         <a href="/accounts/<%= account._id %>"><button>View</button></a>
+        <% if (account.author._id.equals(user.profile._id)) { %>
         <a href="/accounts/<%= account._id %>/edit"><button>Edit</button></a>
-        <form action="/accounts/<%= account._id %>/delete" method="POST">
+        <form action="/accounts/<%= account._id %>?_method=DELETE" method="POST">
           <button type="submit">Delete</button>
         </form>
+        <% } %>
       </div>
     </div>
   <% }) %>
