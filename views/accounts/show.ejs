@@ -3,8 +3,11 @@
 <%- include('../partials/nav') %>
 
 <main>
+
   <h1>Account List</h1>
+
   <div class="accounts-container">
+
     <div><img id="avatar" src="<%= account.avatar %>" alt=""></div>
     <div class="account-info">Name: <%= account.author.name %></div>
     <div class="account-info">Email: <%= user.email %></div>
@@ -18,6 +21,37 @@
       </form>
       <% } %>
     </div>
+
+    <% if (account.applications) { %>
+      <h3>Applications</h3>
+      <div>
+        <% account.applications.forEach(application => { %>
+          <div>
+            <%= application.company %>
+            <%= application.position %>
+            <%= application.type %>
+            <%= application.availability %>
+            <%= application.location %>
+            <%= application.mileRange %>
+            <%= application.workDays %>
+            <%= application.skills %>
+            <%= application.author.name %> 
+            <% if (account.author._id.equals(user.profile._id)) { %>
+              <form action="/accounts/<%= account._id %>/applications/<%= application._id %>?_method=DELETE" method="POST">
+                <button type="submit">🗑️</button>
+              </form> 
+            <% } %>
+            </div>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <h3>This person has no applications yet</h3>
+    <% } %>
+
+  </div>
+
+  <div class="form-container">
+
     <form method="POST" action="/accounts/<%= account._id %>/applications">
       <label for="company">Company:</label>
       <input type="text" id="company" name="company" required>
@@ -62,33 +96,11 @@
       <input type="text" id="skills" name="skills">
 
       <button type="submit" class="app-button">Add Application</button>
+      
     </form>
-    <% if (account.applications) { %>
-      <h3>Applications</h3>
-      <div>
-        <% account.applications.forEach(application => { %>
-          <div>
-            <%= application.company %>
-            <%= application.position %>
-            <%= application.type %>
-            <%= application.availability %>
-            <%= application.location %>
-            <%= application.mileRange %>
-            <%= application.workDays %>
-            <%= application.skills %>
-            <%= application.author.name %> 
-            <% if (account.author._id.equals(user.profile._id)) { %>
-              <form action="/accounts/<%= account._id %>/applications/<%= application._id %>?_method=DELETE" method="POST">
-                <button type="submit">🗑️</button>
-              </form> 
-            <% } %>
-            </div>
-        <% }) %>
-        </div>
-    <% } else { %>
-      <h3>This person has no applications yet</h3>
-    <% } %>
+
   </div>
+
 </main>
 
 <%- include('../partials/footer') %>
