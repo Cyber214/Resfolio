@@ -94,6 +94,34 @@ function deleteApp(req, res) {
   })
 }
 
+function edit(req, res) {
+  Account.findById(req.params.accountId)
+  .then(account => {
+    res.render('accounts/edit', {
+      account: account,
+      title: 'Edit Account'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/accounts')
+  })
+}
+
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
+  Account.findByIdAndUpdate(req.params.accountId, req.body, {new: true})
+  .then(account => {
+    res.redirect(`/accounts/${account._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/movies')
+  })
+}
+
 export {
   newAccount as new,
   create,
@@ -101,5 +129,7 @@ export {
   deleteAccount as delete,
   show,
   createApp,
-  deleteApp
+  deleteApp,
+  edit,
+  update,
 }

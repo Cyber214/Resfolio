@@ -1,0 +1,51 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/movies/edit.css">
+<%- include('../partials/nav') %>
+
+
+<main>
+  <h1><%= title %></h1>
+  <form action="/accounts/<%= account._id %>" method="POST" class="account-form">
+
+    <div>
+      <label for="phoneNo">Phone Number:</label>
+      <input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter phone number" required>
+    </div>
+
+    <div>
+      <label for="street">Street:</label>
+      <input type="text" id="street" name="street" placeholder="Enter street" required>
+    </div>
+
+    <div>
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" placeholder="Enter state" required>
+    </div>
+
+    <div>
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country" placeholder="Enter country" required>
+    </div>
+
+    <div>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dateOfBirth" required>
+    </div>
+
+    <div>
+        <label for="languages">Languages:</label>
+        <input type="text" id="languages" name="languages" placeholder="Enter languages (comma-separated)">
+    </div>
+
+    <div>
+        <label for="accountPhoto">Account Photo URL:</label>
+        <input type="text" id="accountPhoto" name="accountPhoto" placeholder="Enter account photo URL">
+    </div>
+
+    <button type="submit">Create Account</button>
+
+  </form>
+
+</main>
+
+<%- include('../partials/footer') %>
