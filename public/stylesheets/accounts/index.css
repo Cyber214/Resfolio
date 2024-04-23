@@ -15,8 +15,8 @@ body {
   padding: 20px;
   border: 3px solid #2F3D59; /* Updated border color */
   border-radius: 10px;
-  background: #336699; /* Updated background color */
-  color: white;
+  background: #c4e8f3; /* Updated background color */
+  color: rgb(0, 0, 0);
   margin-top: 30px;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .account-actions {
-  background: #2F3D59; /* Updated background color */
+  background: #2F3D59;
   display: flex;
   max-width: 400px;
   margin: 0 auto;

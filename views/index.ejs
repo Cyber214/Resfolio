@@ -1,7 +1,7 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main>
+<div id="landing">
   <h2>hello <%= user ? user.profile.name : "friends" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
@@ -12,18 +12,18 @@
       />
     </div>
     <h1>!!WELCOME!!</h1>
-    <brbr></brbr>
+    <br>
     <h2>!To the prefect growth app for success!</h2>
     <h1>Resfolio</h1>
   <% } %>
   <% if (!user) { %>
     <h1>HEY!!!!</h1>
-    <brbr></brbr>
+    <br>
     <h2>Don't search for jobs,</h2>
-    <brbr></brbr>
+    <br>
     <h2>have employers search for you🫵🏼</h2>
     <h1>Resfolio</h1>
   <% } %>
-</main>
+  </div>
 
 <%- include('./partials/footer') %>

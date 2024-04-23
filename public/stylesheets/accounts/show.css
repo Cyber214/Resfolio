@@ -7,6 +7,10 @@ h1 {
 }
 
 .acc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 5px;
@@ -21,9 +25,16 @@ h1 {
   margin-bottom: 20px;
 }
 
-.acc-actions {
+.action-buttons {
+  background: #2F3D59;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #7CDE95;
+  border-radius: 10px;
 }
 
 .add-container {
