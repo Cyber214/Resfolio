@@ -33,11 +33,11 @@ const appSchema = new Schema({
 
 const accountSchema = new Schema({
 	author: { type: Schema.Types.ObjectId, ref: 'Profile' },
-	address: String,
-	email: String,
 	phoneNo: {
     type: Number,
   },
+	street: String,
+	country: String,
 	dateOfBirth: Date,
   languages: [String],
   accountPhoto: String,

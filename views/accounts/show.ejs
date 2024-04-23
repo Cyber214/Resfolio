@@ -16,7 +16,7 @@
     <div class="account-info">Languages: <%= account.languages.join(', ') %></div>
     <div class="action-buttons">
       <% if (account.author._id.equals(user.profile._id)) { %>
-      <a href="/accounts/<%= account._id %>/edit"><button>Edit</button></a>
+      <a href="/accounts/<%= account._id %>/edit"><button id="edit-btn">Edit</button></a>
       <form action="/accounts/<%= account._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
       </form>
@@ -25,9 +25,9 @@
 
     <% if (account.applications.length) { %>
       <h3>Applications List</h3>
-      <div>
+      <ul>
         <% account.applications.forEach(application => { %>
-          <div>
+          <li>
             <%= application.company %>
             <%= application.position %>
             <%= application.type %>
@@ -39,12 +39,12 @@
             <%= application.author.name %> 
             <% if (account.author._id.equals(user.profile._id)) { %>
               <form action="/accounts/<%= account._id %>/applications/<%= application._id %>?_method=DELETE" method="POST">
-                <button type="submit">❌</button>
+                <button id="delete-btn"type="submit">❌</button>
               </form> 
             <% } %>
-            </div>
+          </li>
         <% }) %>
-      </div>
+      </ul>
     <% } else { %>
       <h3>This person has no applications yet</h3>
     <% } %>
