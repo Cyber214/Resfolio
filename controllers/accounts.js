@@ -109,16 +109,13 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   Account.findByIdAndUpdate(req.params.accountId, req.body, {new: true})
   .then(account => {
     res.redirect(`/accounts/${account._id}`)
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/movies')
+    res.redirect('/accounts')
   })
 }
 

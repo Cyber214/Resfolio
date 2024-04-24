@@ -15,11 +15,11 @@
       <div class="account-info">Phone Number: <%= account.phoneNo %></div>
       <div class="account-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
       <div class="account-actions">
-        <a href="/accounts/<%= account._id %>"><button>View</button></a>
+        <a href="/accounts/<%= account._id %>"><button class="btn-main">View</button></a>
         <% if (account.author._id.equals(user.profile._id)) { %>
-        <a href="/accounts/<%= account._id %>/edit"><button>Edit</button></a>
+        <a href="/accounts/<%= account._id %>/edit"><button class="btn-main">Edit</button></a>
         <form action="/accounts/<%= account._id %>?_method=DELETE" method="POST">
-          <button type="submit">Delete</button>
+          <button class="btn-main" type="submit">Delete</button>
         </form>
         <% } %>
       </div>

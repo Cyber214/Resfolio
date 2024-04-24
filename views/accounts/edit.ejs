@@ -6,7 +6,7 @@
 
 <main>
   
-  <form action="/accounts/<%= account._id %>" method="POST" class="account-form">
+  <form action="/accounts/<%= account._id %>?_method=PUT" method="POST" class="account-form">
 
     <div>
       <label for="phoneNo">Phone Number:</label>
@@ -34,13 +34,13 @@
     </div>
 
     <div>
-        <label for="languages">Languages:</label>
-        <input type="text" id="languages" name="languages" placeholder="Enter languages (comma-separated)">
+      <label for="languages">Languages:</label>
+      <input type="text" id="languages" name="languages" placeholder="Enter languages (comma-separated)">
     </div>
 
     <div>
-        <label for="accountPhoto">Account Photo URL:</label>
-        <input type="text" id="accountPhoto" name="accountPhoto" placeholder="Enter account photo URL">
+      <label for="accountPhoto">Account Photo URL:</label>
+      <input type="text" id="accountPhoto" name="accountPhoto" placeholder="Enter account photo URL">
     </div>
 
     <button type="submit">Save Account</button>

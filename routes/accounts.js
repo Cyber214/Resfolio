@@ -20,7 +20,7 @@ router.post('/:accountId/applications', isLoggedIn, accountsCtrl.createApp)
 
 router.delete('/:accountId/applications/:applicationId', isLoggedIn, accountsCtrl.deleteApp)
 
-router.put('/:accountId', accountsCtrl.update)
+router.put('/:accountId', isLoggedIn, accountsCtrl.update)
 
 export {
   router
