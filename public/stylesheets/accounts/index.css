@@ -15,7 +15,7 @@ body {
   padding: 20px;
   border: 3px solid #2F3D59; /* Updated border color */
   border-radius: 10px;
-  background: #c4e8f3; /* Updated background color */
+  background: whitesmoke; /* Updated background color */
   color: rgb(0, 0, 0);
   margin-top: 30px;
 }
@@ -40,7 +40,7 @@ body {
   max-width: 400px;
   margin: 0 auto;
   padding: 10px;
-  border: 1px solid #7CDE95;
+  border: 2px solid aqua;;
   border-radius: 10px;
 }
 

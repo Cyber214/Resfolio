@@ -1,29 +1,34 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/accounts/index.css">
 <%- include('./partials/nav') %>
 
 <div id="landing">
-  <h2>hello <%= user ? user.profile.name : "friends" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        id="avatar"
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-    <h1>!!WELCOME!!</h1>
+  <h2>Hello <%= user ? user.profile.name : "friends" %></h1>
+    <% if (user?.profile.avatar) { %>
+      <h1>Welcome to Resfolio</h1>
     <br>
-    <h2>!To the prefect growth app for success!</h2>
-    <h1>Resfolio</h1>
-  <% } %>
+    <h2>Where employers find you.</h2>
+    <h2>Create your Account in seconds. Showcase your skills to the world.</h2>
+    <h2>Take control of your career path. Resfolio is your key to success.</h2>
+    <h2>Break down towering walls with determination.</h2>
+    <% } %>
   <% if (!user) { %>
-    <h1>HEY!!!!</h1>
-    <br>
-    <h2>Don't search for jobs,</h2>
-    <br>
-    <h2>have employers search for you🫵🏼</h2>
-    <h1>Resfolio</h1>
+    <h2>Welcome to Resfolio</h2>
+      <img src="/resfolio_devices_image.jpg" alt="Resfolio app on multiple devices">
+  
+      <p>Empower your career with Resfolio. Craft standout resumes and portfolios effortlessly.</p>
+  
+      <div id="features">
+        <h3>Features</h3>
+        <p>Manage multiple profiles. Choose customizable templates. Showcase your work seamlessly.</p>
+        <p>Collaborate with ease. Keep your data secure. Accessible anytime, anywhere.</p>
+      </div>
+  
+      <div id="why-choose">
+        <h3>Why Choose Resfolio?</h3>
+        <p>Save time. Impress employers. Adapt to your needs. Join a supportive community.</p>
+      </div>
   <% } %>
-  </div>
+</div>
 
 <%- include('./partials/footer') %>

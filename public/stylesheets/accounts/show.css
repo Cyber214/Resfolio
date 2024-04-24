@@ -14,10 +14,6 @@ h1 {
   margin-top: 10px;
 }
 
-li {
-  margin-bottom: 10px;
-}
-
 .acc-container {
   border: 1px solid #2F3D59;
   display: flex;

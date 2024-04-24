@@ -8,7 +8,7 @@
 
   <div class="acc-container">
 
-    <div><img id="avatar" src="<%= account.avatar %>" alt=""></div>
+    <div><img id="avatar" src="<%= account.photo %>"></div>
     <div class="acc-info">Name: <%= account.author.name %></div>
     <div class="acc-info">Email: <%= user.email %></div>
     <div class="acc-info">Phone Number: <%= account.phoneNo %></div>
@@ -28,8 +28,8 @@
       <ul>
         <% account.applications.forEach(application => { %>
           <li>
-            <%= application.company %>
-            <%= application.position %>
+            This person is looking for  a <%= application.position %> position
+            at <%= application.company %>
             <%= application.type %>
             <%= application.availability %>
             <%= application.location %>
