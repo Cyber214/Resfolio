@@ -37,7 +37,7 @@
             within a <%= application.mileRange %> mile radius,
             available on <%= application.workDays %>,
             with strong proficiency in <%= application.skills %>.
-            This is <%= application.author.name %>'s application.
+            This is <%= account.author.name %>'s application.
             <% if (account.author._id.equals(user.profile._id)) { %>
               <form action="/accounts/<%= account._id %>/applications/<%= application._id %>?_method=DELETE" method="POST">
                 <button id="delete-btn"type="submit">❌</button>
