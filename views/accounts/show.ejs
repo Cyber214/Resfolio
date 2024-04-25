@@ -15,6 +15,7 @@
     <div class="acc-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
     <div class="account-info">Languages: <%= account.languages.join(', ') %></div>
     <div class="action-buttons">
+      <a href="/accounts"><button id="back-btn">Back</button></a>
       <% if (account.author._id.equals(user.profile._id)) { %>
       <a href="/accounts/<%= account._id %>/edit"><button id="edit-btn">Edit</button></a>
       <form action="/accounts/<%= account._id %>?_method=DELETE" method="POST">
