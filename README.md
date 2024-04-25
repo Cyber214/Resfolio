@@ -23,8 +23,9 @@ https://resfolio.fly.dev
 - GitHub
 - Whimsical
 - Trello
-- MangoDB Compass
+- MongoDB Compass
 - Node.js
+- Google OAuth
 
 ## `Attributions` ❖
 

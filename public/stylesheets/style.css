@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8am9iJTIwbWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D);
+  background-image: url("/assets/img/landing.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

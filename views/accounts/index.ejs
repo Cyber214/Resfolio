@@ -2,11 +2,10 @@
 <link rel="stylesheet" href="/stylesheets/accounts/index.css">
 <%- include('../partials/nav') %>
 
-
 <h1>Account List</h1>
 
 <main>
-  
+
   <% accounts.forEach(account => { %>
     <div class="accounts-container">
       <div><img id="avatar" src="<%= account.photo %>" alt="account image"></div>
@@ -25,6 +24,7 @@
       </div>
     </div>
   <% }) %>
+
 </main>
 
 <%- include('../partials/footer') %>

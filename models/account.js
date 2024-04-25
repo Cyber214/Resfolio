@@ -37,10 +37,11 @@ const accountSchema = new Schema({
     type: Number,
   },
 	street: String,
+	city: String,
+	state: String,
 	country: String,
 	dateOfBirth: Date,
   languages: [String],
-  photo: String,
 	applications: [appSchema]
 }, {
 	timestamps: true

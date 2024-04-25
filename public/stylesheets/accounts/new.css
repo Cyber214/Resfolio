@@ -23,23 +23,12 @@ input, textarea {
   border-radius: 5px;
 }
 
-.account-actions {
-  background: #2F3D59;
-  display: flex;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 10px;
-  border: 1px solid #7CDE95;
-  border-radius: 10px;
-}
-
 .account-form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-.account-form input[type="src"],
 .account-form input[type="text"],
 .account-form input[type="tel"],
 .account-form input[type="date"] {
@@ -54,7 +43,7 @@ input, textarea {
   display: block;
   width: 40vh;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #0159b7;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -62,5 +51,5 @@ input, textarea {
 }
 
 .account-form button:hover {
-  background-color: #0056b3;
+  background-color: #004084;
 }

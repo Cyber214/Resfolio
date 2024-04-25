@@ -33,6 +33,17 @@
     </div>
 
     <div>
+      <label for="accountPhoto">City:</label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        value="<%= account.city %>"
+        placeholder="Enter city"
+      >
+    </div>
+
+    <div>
       <label for="state">State:</label>
       <input
         type="text"
@@ -51,7 +62,7 @@
         id="country"
         name="country"
         placeholder="Enter country"
-        value="<%= acount.country %>"
+        value="<%= account.country %>"
         required
       >
     </div>
@@ -73,19 +84,8 @@
         type="text"
         id="languages"
         name="languages"
-        value="<%= account.languages %>"
+        value="<%= account.languages.join(', ') %>"
         placeholder="Enter languages (comma-separated)"
-      >
-    </div>
-
-    <div>
-      <label for="accountPhoto">Account Photo URL:</label>
-      <input
-        type="text"
-        id="accountPhoto"
-        name="accountPhoto"
-        value="<%= account.photo %>"
-        placeholder="Enter account photo URL"
       >
     </div>
 

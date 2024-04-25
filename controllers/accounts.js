@@ -14,7 +14,7 @@ function create(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/')
+    res.redirect('/accounts/new')
   })
 }
 
@@ -26,6 +26,10 @@ function show(req, res) {
       title: 'Account Details',
       account: account
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 
