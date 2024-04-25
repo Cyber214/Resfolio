@@ -39,6 +39,7 @@ input, textarea {
   font-weight: bold;
 }
 
+.account-form input[type="src"],
 .account-form input[type="text"],
 .account-form input[type="tel"],
 .account-form input[type="date"] {

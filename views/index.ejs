@@ -5,7 +5,7 @@
 <div id="landing">
   <h2>Hello <%= user ? user.profile.name : "friends" %></h1>
     <% if (user?.profile.avatar) { %>
-      <h1>Welcome to Resfolio</h1>
+      <h1 class="animate__animated animate__rollOut">Welcome to Resfolio</h1>
     <br>
     <h2>Where employers find you.</h2>
     <h2>Create your Account in seconds. Showcase your skills to the world.</h2>
@@ -13,7 +13,7 @@
     <h2>Break down towering walls with determination.</h2>
     <% } %>
   <% if (!user) { %>
-    <h2>Welcome to Resfolio</h2>
+    <h2 class="animate__animated animate__rollIn">Welcome to Resfolio</h2>
       <img id="avatar" src="/assets/img/favicon.ico" alt="Resfolio app on multiple devices">
   
       <p>Empower your career with Resfolio. Craft standout resumes and portfolios effortlessly.</p>
