@@ -10,37 +10,83 @@
 
     <div>
       <label for="phoneNo">Phone Number:</label>
-      <input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter phone number" required>
+      <input
+        type="tel"
+        id="phoneNo"
+        name="phoneNo"
+        placeholder="Enter phone number"
+        value="<%= account.phoneNo %>"
+        required
+      >
     </div>
 
     <div>
       <label for="street">Street:</label>
-      <input type="text" id="street" name="street" placeholder="Enter street" required>
+      <input
+        type="text"
+        id="street"
+        name="street"
+        placeholder="Enter street"
+        value="<%= account.street %>"
+        required
+      >
     </div>
 
     <div>
       <label for="state">State:</label>
-      <input type="text" id="state" name="state" placeholder="Enter state" required>
+      <input
+        type="text"
+        id="state"
+        name="state"
+        placeholder="Enter state"
+        value="<%= account.state %>"
+        required
+      >
     </div>
 
     <div>
       <label for="country">Country:</label>
-      <input type="text" id="country" name="country" placeholder="Enter country" required>
+      <input
+        type="text"
+        id="country"
+        name="country"
+        placeholder="Enter country"
+        value="<%= acount.country %>"
+        required
+      >
     </div>
 
     <div>
       <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dateOfBirth" required>
+      <input
+        type="date"
+        id="dob"
+        name="dateOfBirth"
+        value="<%= account.dateOfBirth %>"
+        required
+      >
     </div>
 
     <div>
       <label for="languages">Languages:</label>
-      <input type="text" id="languages" name="languages" placeholder="Enter languages (comma-separated)">
+      <input
+        type="text"
+        id="languages"
+        name="languages"
+        value="<%= account.languages %>"
+        placeholder="Enter languages (comma-separated)"
+      >
     </div>
 
     <div>
       <label for="accountPhoto">Account Photo URL:</label>
-      <input type="text" id="accountPhoto" name="accountPhoto" placeholder="Enter account photo URL">
+      <input
+        type="text"
+        id="accountPhoto"
+        name="accountPhoto"
+        value="<%= account.photo %>"
+        placeholder="Enter account photo URL"
+      >
     </div>
 
     <button type="submit">Save Account</button>
