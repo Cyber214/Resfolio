@@ -1,8 +1,8 @@
-# `Resfolio` ![alt text](/assets/img/rflogo.png)
+# `Resfolio`
 ***
 
-![screenshot of account list](/assets/img/image.png)
-![screenshot of account list](/assets/img/image2.png)
+![screenshot of account list](/assets/img/image-1.png)
+![screenshot of account details](/assets/img/image.png)
 
 ## [Deploy Resfolio here](https://resfolio.fly.dev)⬅
 
