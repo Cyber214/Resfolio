@@ -11,7 +11,7 @@ https://resfolio.fly.dev
 
 ## [Trello Planning](https://trello.com/b/R2VCddfo/resfolio)
 
-## [Deploy Resfolio here](https://resfolio.fly.dev)🕹
+## [Deploy Resfolio here](https://resfolio.fly.dev)
 
 ## `Technologies used` 🖥
 
@@ -38,5 +38,5 @@ https://resfolio.fly.dev
 - [x] A drop down menu to take you to different routes in place of the navigation bar
 - Search bar for job title
 - Resume url input in form to upload resume document
-- AAU, i should be able to see the application list and the application details o the same page.
+- the application list and the application details on the same page.
 - If school finished Boolean is clicked display end year input

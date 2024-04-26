@@ -8,9 +8,8 @@
 
   <div class="acc-container">
 
-    <div><img id="avatar" src="<%= account.photo %>"></div>
+    <div><img id="avatar" src="<%= account.author.avatar %>"></div>
     <div class="acc-info">Name: <%= account.author.name %></div>
-    <div class="acc-info">Email: <%= user.email %></div>
     <div class="acc-info">Phone Number: <%= account.phoneNo %></div>
     <div class="acc-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
     <div class="account-info">Languages: <%= account.languages.join(', ') %></div>

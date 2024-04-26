@@ -8,9 +8,8 @@
 
   <% accounts.forEach(account => { %>
     <div class="accounts-container">
-      <div><img id="avatar" src="<%= account.photo %>"></div>
+      <div><img id="avatar" src="<%= account.author.avatar %>"></div>
       <div class="account-info">Name: <%= account.author.name %></div>
-      <div class="account-info">Email: <%= user.email %></div>
       <div class="account-info">Phone Number: <%= account.phoneNo %></div>
       <div class="account-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
       <div class="account-actions">
