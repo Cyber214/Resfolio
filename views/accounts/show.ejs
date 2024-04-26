@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/accounts/show.css">
 <%- include('../partials/nav') %>
 
-<h1>Account List</h1>
+<h1><%= title %></h1>
 
 <div id="body">
 
@@ -12,7 +12,7 @@
     <div class="acc-info">Name: <%= account.author.name %></div>
     <div class="acc-info">Phone Number: <%= account.phoneNo %></div>
     <div class="acc-info">Street: <%= account.street %></div>
-    <div class="acc-info">location: <%= account.city %>, <%= account.state %>, <%= account.country %>. </div>
+    <div class="acc-info">Location: <%= account.city %>, <%= account.state %>, <%= account.country %>. </div>
     <div class="acc-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
     <div class="account-info">Languages: <%= account.languages.join(', ') %></div>
     <div class="action-buttons">
@@ -59,10 +59,10 @@
 
     <form method="POST" action="/accounts/<%= account._id %>/applications">
       <label for="company">Company:</label>
-      <input type="text" id="company" name="company" required>
+      <input type="text" id="company" name="company" placeholder="Enter Preferred Company" required>
 
       <label for="position">Position:</label>
-      <input type="text" id="position" name="position">
+      <input type="text" id="position" name="position" placeholder="Enter Preferred Position">
 
       <label for="type">Type:</label>
       <select id="type" name="type" required>
@@ -80,7 +80,7 @@
       </select>
 
       <label for="location">Location:</label>
-      <input type="text" id="location" name="location">
+      <input type="text" id="location" name="location" placeholder="Enter Preferred Work Location">
 
       <label for="mileRange">Mile Range:</label>
       <select id="mileRange" name="mileRange">
@@ -98,7 +98,7 @@
       </select>
 
       <label for="skills">Skills:</label>
-      <input type="text" id="skills" name="skills">
+      <input type="text" id="skills" name="skills" placeholder="Enter Skills (comma-separated)">
       <br><br>
       <button type="submit" class="app-button">Add Application</button>
       

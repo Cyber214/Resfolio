@@ -5,29 +5,39 @@
 <div id="landing">
   <h2>Hello <%= user ? user.profile.name : "friends" %></h1>
     <% if (user?.profile.avatar) { %>
-      <h1 class="animate__animated animate__rollOut">Welcome to Resfolio</h1>
-    <br>
-    <h2>Where employers find you.</h2>
-    <h2>Create your Account in seconds. Showcase your skills to the world.</h2>
-    <h2>Take control of your career path. Resfolio is your key to success.</h2>
-    <h2>Break down towering walls with determination.</h2>
+      <div id="logged">
+
+        <h1 class="animate__animated animate__fadeInDownBig">Welcome to Resfolio</h1>
+        <img id="avatar" src="/assets/img/favicon.ico" alt="Resfolio Logo">
+        <br>
+        
+        <h2>Where employers find you. Where you find growth.</h2>
+        <h2>Create your Account in seconds. Showcase your skills to the world.</h2>
+        <h2>Take control of your career path. Resfolio is your key to success.</h2>
+        <h2>Break down towering walls with determination.</h2>
+
+      </div>
     <% } %>
   <% if (!user) { %>
-    <h2 class="animate__animated animate__rollIn">Welcome to Resfolio</h2>
-      <img id="avatar" src="/assets/img/favicon.ico" alt="Resfolio app on multiple devices">
+    <div id="not-logged">
+
+      <h1 class="animate__animated animate__fadeInUpBig">Welcome to Resfolio</h1>
+      <img id="avatar" src="/assets/img/favicon.ico" alt="Resfolio logo">
   
-      <p>Empower your career with Resfolio. Craft standout resumes and portfolios effortlessly.</p>
+      <h3>Empower your career with Resfolio. Craft standout resumes and portfolios effortlessly.</h3>
   
       <div id="features">
-        <h3>Features</h3>
-        <p>Manage multiple profiles. Choose customizable templates. Showcase your work seamlessly.</p>
-        <p>Collaborate with ease. Keep your data secure. Accessible anytime, anywhere.</p>
+        <h2>Features</h2>
+        <h3>Manage multiple profiles. Choose customizable templates. Showcase your work seamlessly.</h3>
+        <h3>Collaborate with ease. Keep your data secure. Accessible anytime, anywhere.</h3>
       </div>
   
       <div id="why-choose">
-        <h3>Why Choose Resfolio?</h3>
-        <p>Save time. Impress employers. Adapt to your needs. Join a supportive community.</p>
+        <h2>Why Choose Resfolio?</h2>
+        <h3>Save time. Impress employers. Adapt to your needs. Join a supportive community.</h3>
       </div>
+
+    </div>
   <% } %>
 </div>
 

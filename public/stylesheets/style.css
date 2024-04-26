@@ -98,3 +98,35 @@ button {
   border-color: aqua;
   border-radius: 7px;
 }
+
+#not-logged {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  flex-direction: column;
+  border: 1px solid #2F3D59;
+  display: flex;
+  align-items: center;
+  background-color: rgb(234, 246, 255);
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 60vh;
+  width: 60vh;
+}
+
+#logged {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  flex-direction: column;
+  border: 1px solid #2F3D59;
+  display: flex;
+  align-items: center;
+  background-color: rgb(234, 246, 255);
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 60vh;
+  width: 60vh;
+}

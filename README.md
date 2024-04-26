@@ -1,6 +1,9 @@
 # `Resfolio` ![alt text](public/assets/img/favicon.ico)
 ***
 
+![screenshot of account list](/assets/img/image.png)
+![screenshot of account list](public/assets/img/image2.png)
+
 ## [Deploy Resfolio here](https://resfolio.fly.dev)📄
 #### `Description` 📝
 ***

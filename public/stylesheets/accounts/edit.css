@@ -6,7 +6,7 @@ form {
   width: 25%;
   display: flex;
   flex-direction: column;
-  background: whitesmoke;
+  background: rgb(234, 246, 255);
   color: #2F3D59;
 }
 
@@ -21,16 +21,6 @@ input, textarea {
   padding: 20px;
   border: 1px solid #2F3D59;
   border-radius: 5px;
-}
-
-.account-actions {
-  background: #2F3D59;
-  display: flex;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 10px;
-  border: 1px solid #7CDE95;
-  border-radius: 10px;
 }
 
 .account-form label {
@@ -53,7 +43,7 @@ input, textarea {
   display: block;
   width: 40vh;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #005fc4;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -61,5 +51,5 @@ input, textarea {
 }
 
 .account-form button:hover {
-  background-color: #0056b3;
+  background-color: #004998;
 }

@@ -15,7 +15,7 @@ body {
   padding: 20px;
   border: 3px solid #2F3D59; /* Updated border color */
   border-radius: 10px;
-  background: whitesmoke; /* Updated background color */
+  background: rgb(234, 246, 255);
   color: rgb(0, 0, 0);
   margin-top: 30px;
 }
