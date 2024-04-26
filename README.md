@@ -4,7 +4,7 @@
 ![screenshot of account list](/assets/img/image-1.png)
 ![screenshot of account details](/assets/img/image.png)
 
-## [Deploy Resfolio here](https://resfolio.fly.dev)⬅
+## [Try out Resfolio here](https://resfolio.fly.dev)⬅
 
 #### `Description` 📝
 ***
@@ -42,5 +42,5 @@
 - A drop down menu to take you to different routes in place of the navigation bar.
 - Search bar for job title.
 - Resume url input in form to upload resume document.
-- [x] Display application list with 4 in a row.
+- [x] Display applications list with 4 in a row.
 - Add Education schema.
