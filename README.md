@@ -1,31 +1,31 @@
 # `Resfolio` ![alt text](public/assets/img/favicon.ico)
 ***
 
-https://resfolio.fly.dev
-
+## [Deploy Resfolio here](https://resfolio.fly.dev)📄
 #### `Description` 📝
 ***
-#### 
+#### Resfolio is
+
 
 ## [Resfolio Planning Doc](https://docs.google.com/document/d/1mUVz_zz4NqaR34Sl9zEqurpi_000LOe71DqWH0EL_vM/edit)⬅
 
 ## [Trello Planning](https://trello.com/b/R2VCddfo/resfolio)
 
-## [Deploy Resfolio here](https://resfolio.fly.dev)
-
 ## `Technologies used` 🖥
 
 - HTML
 - CSS
+- MongoDB
 - JavaScript
-- Fly.io
-- Git
-- GitHub
-- Whimsical
+- Whimsical (if you used it)
 - Trello
-- MongoDB Compass
-- Node.js
+- Fly.io
 - Google OAuth
+- Express
+- Node
+- Passport.js
+- Git
+- Github
 
 ## `Attributions` ❖
 
@@ -38,5 +38,5 @@ https://resfolio.fly.dev
 - [x] A drop down menu to take you to different routes in place of the navigation bar
 - Search bar for job title
 - Resume url input in form to upload resume document
-- the application list and the application details on the same page.
+- Display application list and the application details o the same page.
 - If school finished Boolean is clicked display end year input

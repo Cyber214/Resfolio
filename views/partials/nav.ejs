@@ -5,17 +5,10 @@
 <body>
   <nav>
     <% if (user) { %>
-      <ul class="menu">
-        <li class="dropdown">
-          <i class="fas fa-solid fa-bars"></i>
-          <div class="dropdown-content">
-            <a href="/accounts">All Accounts</a>
-            <a href="/accounts/new">New Account</a>
-          </div>
-        </li>
-      </ul>
       <img id="avatar" src="<%= user.profile.avatar %>"/>
       <p>Logged in as <%= user.profile.name %></p>
+      <a href="/accounts">All Accounts</a>
+      <a href="/accounts/new">New Account</a>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>

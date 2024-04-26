@@ -11,6 +11,8 @@
     <div><img id="avatar" src="<%= account.author.avatar %>"></div>
     <div class="acc-info">Name: <%= account.author.name %></div>
     <div class="acc-info">Phone Number: <%= account.phoneNo %></div>
+    <div class="acc-info">Street: <%= account.street %></div>
+    <div class="acc-info">location: <%= account.city %>, <%= account.state %>, <%= account.country %>. </div>
     <div class="acc-info">Date of Birth: <%= account.dateOfBirth.toLocaleDateString() %></div>
     <div class="account-info">Languages: <%= account.languages.join(', ') %></div>
     <div class="action-buttons">
@@ -28,15 +30,17 @@
       <ul>
         <% account.applications.forEach(application => { %>
           <li>
-            Looking for a <%= application.position %> position
-            at <%= application.company %>
-            <%= application.type %>,
-            <%= application.availability %>,
+            Looking for a <%= application.type %> <%= application.position %> position at <%= application.company %>
+          </li>
+          <li>
+            ready to start in <%= application.availability %>,
             preferably located in <%= application.location %>,
-            within a <%= application.mileRange %> mile radius,
+            within a <%= application.mileRange %> mile radius
+          </li>
+          <li>
             available on <%= application.workDays %>,
             with strong proficiency in <%= application.skills %>.
-            This is <%= account.author.name %>'s application.
+          </li>
             <% if (account.author._id.equals(user.profile._id)) { %>
               <form action="/accounts/<%= account._id %>/applications/<%= application._id %>?_method=DELETE" method="POST">
                 <button id="delete-btn"type="submit">❌</button>
@@ -70,7 +74,7 @@
 
       <label for="availability">Availability:</label>
       <select id="availability" name="availability" required>
-        <option value="immediately">Immediately</option>
+        <option value="immediately">2 days</option>
         <option value="2 weeks">2 Weeks</option>
         <option value="1 month">1 Month</option>
       </select>

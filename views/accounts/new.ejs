@@ -11,7 +11,7 @@
 
     <div>
       <label for="phoneNo">Phone Number:</label>
-      <input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter phone number" required>
+      <input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter 10 digit phone number" pattern="[1-9]{1}[0-9]{9}" required>
     </div>
     
     <div>
@@ -36,7 +36,7 @@
     
     <div>
       <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dateOfBirth" required>
+      <input type="date" id="dob" name="dateOfBirth" min='1958-01-01' max='2006-01-01' required>
     </div>
 
     <div>
