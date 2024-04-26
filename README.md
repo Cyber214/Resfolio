@@ -34,7 +34,6 @@
 ## `Attributions` ❖
 
 - I got my Favicon from [here](https://www.favicon.cc/)
-- I got my Icons from [Font Awesome](https://fontawesome.com/)
 - Animations from [Animate.css](https://animate.style/)
 
 ## `Ice Box` ❄️
