@@ -1,16 +1,17 @@
-# `Resfolio` ![alt text](public/assets/img/favicon.ico)
+# `Resfolio` ![alt text](/assets/img/rflogo.png)
 ***
 
 ![screenshot of account list](/assets/img/image.png)
 ![screenshot of account list](/assets/img/image2.png)
 
-## [Deploy Resfolio here](https://resfolio.fly.dev)📄
+## [Deploy Resfolio here](https://resfolio.fly.dev)⬅
+
 #### `Description` 📝
 ***
 #### Resfolio is an app where people can create accounts which display applications to potential companies under many job positions. Create in applications in seconds, have employers search for you not just the other way around, and find success!
 
 
-## [Resfolio Planning Doc](https://docs.google.com/document/d/1mUVz_zz4NqaR34Sl9zEqurpi_000LOe71DqWH0EL_vM/edit)⬅
+## [Resfolio Planning Doc](https://docs.google.com/document/d/1mUVz_zz4NqaR34Sl9zEqurpi_000LOe71DqWH0EL_vM/edit)
 
 ## [Trello Planning](https://trello.com/b/R2VCddfo/resfolio)
 
