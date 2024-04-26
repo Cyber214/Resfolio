@@ -1,8 +1,8 @@
 # `Resfolio`
 ***
 
-![screenshot of account list](/assets/img/image-1.png)
-![screenshot of account details](/assets/img/image.png)
+![screenshot of account list](public/assets/img/image-1.png)
+![screenshot of account details](public/assets/img/image.png)
 
 ## [Try out Resfolio here](https://resfolio.fly.dev)⬅
 
