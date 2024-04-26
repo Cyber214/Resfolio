@@ -2,12 +2,12 @@
 ***
 
 ![screenshot of account list](/assets/img/image.png)
-![screenshot of account list](public/assets/img/image2.png)
+![screenshot of account list](/assets/img/image2.png)
 
 ## [Deploy Resfolio here](https://resfolio.fly.dev)📄
 #### `Description` 📝
 ***
-#### Resfolio is
+#### Resfolio is an app where people can create accounts which display applications to potential companies under many job positions. Create in applications in seconds, have employers search for you not just the other way around, and find success!
 
 
 ## [Resfolio Planning Doc](https://docs.google.com/document/d/1mUVz_zz4NqaR34Sl9zEqurpi_000LOe71DqWH0EL_vM/edit)⬅
@@ -38,8 +38,8 @@
 
 ## `Ice Box` ❄️
 
-- [x] A drop down menu to take you to different routes in place of the navigation bar
-- Search bar for job title
-- Resume url input in form to upload resume document
-- Display application list and the application details o the same page.
-- If school finished Boolean is clicked display end year input
+- A drop down menu to take you to different routes in place of the navigation bar.
+- Search bar for job title.
+- Resume url input in form to upload resume document.
+- [x] Display application list with 4 in a row.
+- Add Education schema.
