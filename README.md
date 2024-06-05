@@ -21,7 +21,7 @@
 - CSS
 - MongoDB
 - JavaScript
-- Whimsical (if you used it)
+- Whimsical
 - Trello
 - Fly.io
 - Google OAuth
